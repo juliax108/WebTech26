@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400&display=swap');
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green: #ef96e1;
+            --green-dark: #f398d6;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --border: #e0e0e0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f5f5f0;
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: #ffffff;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        main {
+            padding: 2.5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .citycard {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0.75rem 0.75rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: default;
+        }
+
+        .citycard:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.13);
+        }
+
+        .cityimage {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 0.6rem;
+        }
+
+        .cityimage img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .cityname {
+            border-top: 1px solid var(--border);
+            width: 100%;
+            padding-top: 0.5rem;
+            text-align: center;
+        }
+
+        .cityname p {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+        }
+
+        footer {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>STÄDTE</h2>
+    </header>
+    <main>
+        <section class="wrapper">
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/berlin.png" alt="Berlin">
+                </div>
+                <div class="cityname">
+                    <p>Berlin</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/bernau.png" alt="Bernau">
+                </div>
+                <div class="cityname">
+                    <p>Bernau</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/brandenburg.png" alt="Brandenburg">
+                </div>
+                <div class="cityname">
+                    <p>Brandenburg</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/bremen.png" alt="Bremen">
+                </div>
+                <div class="cityname">
+                    <p>Bremen</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/bremerhaven.png" alt="Bremerhaven">
+                </div>
+                <div class="cityname">
+                    <p>Bremerhaven</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/madrid.png" alt="Madrid">
+                </div>
+                <div class="cityname">
+                    <p>Madrid</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/magdeburg.png" alt="Magdeburg">
+                </div>
+                <div class="cityname">
+                    <p>Magdeburg</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/mainz.png" alt="Mainz">
+                </div>
+                <div class="cityname">
+                    <p>Mainz</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/mannheim.png" alt="Mannheim">
+                </div>
+                <div class="cityname">
+                    <p>Mannheim</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/marburg.png" alt="Marburg">
+                </div>
+                <div class="cityname">
+                    <p>Marburg</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/newyork.png" alt="New York">
+                </div>
+                <div class="cityname">
+                    <p>New York</p>
+                </div>
+            </div>
+            <div class="citycard">
+                <div class="cityimage">
+                    <img src="./bilder/stockholm.png" alt="Stockholm">
+                </div>
+                <div class="cityname">
+                    <p>Stockholm</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

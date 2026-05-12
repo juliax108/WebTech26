@@ -1,0 +1,114 @@
+/* Schriftart für das ganze Dokument */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header in HTW-Grau */
+header {
+    background-color: #767676;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Icon links, Text rechts */
+    align-items: center;
+}
+
+/* Hauptbereich */
+main {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+/* Überschrift in HTW-Blau */
+h1 {
+    color: #0082D1;
+}
+
+/* Zweite Überschrift eingerückt (wie margin) */
+h2 {
+    margin-left: 40px;
+}
+
+/* Sidebar Icons (rechts positioniert mittels Flexbox oder Absolute) */
+.sidebar-icons {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-icons img {
+    width: 60px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* Die Liste der Übungen */
+ul {
+    list-style: none;
+    padding-left: 40px;
+}
+
+ul li {
+    border: 1px solid #ccc; /* Einzelne Items haben Rahmen */
+    margin: 10px 0;
+    width: 400px;
+}
+
+ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none; /* Keine Unterstriche */
+    color: black;
+}
+
+/* Hover-Effekt für die Liste: HTW-Grün, Schrift weiß */
+ul li:hover {
+    background-color: #76B900;
+    border-color: #76B900;
+}
+
+ul li:hover a {
+    color: white;
+}
+
+/* --- Tabelle für plan.html --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #76B900; /* HTW-Grün */
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Tabellen-Hover mit Box-Shadow laut Aufgabe */
+tr:hover td {
+    background-color: #e8e8e8;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Sticky Footer in HTW-Orange */
+footer {
+    background-color: #FF5F00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Sorgt für Sticky-Effekt bei Flex-Body */
+}
